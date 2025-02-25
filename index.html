@@ -3,56 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronnie's Portfolio</title>
+    <title>Nahid Hasan Ronnie - Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; }
-        .hero { background: #0073e6; color: white; padding: 100px 20px; text-align: center; }
-        .section { padding: 50px 20px; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #0073e6;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0073e6, #00b4d8);
+            color: white;
+            padding: 150px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .section {
+            padding: 80px 20px;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #0073e6;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0073e6;
+        }
+        .btn-primary {
+            background-color: #0073e6;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        .btn-primary:hover {
+            background-color: #005bb5;
+        }
+        .footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nahid Hasan Ronnie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <header class="hero">
-        <h1>Ronnie Nahid Hasan</h1>
-        <p>Environmental Engineer | Data Scientist | Renewable Energy Enthusiast</p>
-        <a href="#contact" class="btn btn-light">Contact Me</a>
+        <div class="container">
+            <h1>Nahid Hasan Ronnie</h1>
+            <p>Environmental Engineer | Data Scientist | Renewable Energy Enthusiast</p>
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+        </div>
     </header>
-    
-    <section class="section bg-light" id="about">
+
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
             <p>I am an environmental engineer with expertise in data science, sustainability, and renewable energy. My work focuses on integrating machine learning and computational modeling to optimize energy systems and environmental impact assessment.</p>
         </div>
     </section>
-    
-    <section class="section" id="projects">
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li>R</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>C/C++</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Frameworks & Tools</h4>
+                    <ul>
+                        <li>R: Caret, randomForest, tidyverse, ggplot2, xgboost</li>
+                        <li>Python: Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, NLTK</li>
+                        <li>Tools: ArcGIS, RETscreen, HEC-RAS, GitHub, Jira, PowerBI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <div class="container">
             <h2>Projects</h2>
-            <ul>
-                <li>Solar Parabolic Dish CSP Plant Analysis</li>
-                <li>RETScreen Renewable Energy Feasibility Study</li>
-                <li>Twitter Election Data Analysis Using NLP</li>
-                <li>Machine Learning Models for No-Tillage Maize Yield Prediction</li>
-            </ul>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Comparison of IML Methods (Master Thesis)</h5>
+                            <p class="card-text">Analyzed global-scale crop yield variations using interpretable machine learning techniques. Implemented Random forests, Gradient boosting, and Linear models with R.</p>
+                            <a href="[Github Link]" target="_blank" class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hydrological Modeling of River Var</h5>
+                            <p class="card-text">Simulated flood scenarios using HEC-RAS and SHETRAN. Analyzed flow regimes and evaluated the impact of weirs on water levels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hydrodynamic Modeling using HEC-RAS</h5>
+                            <p class="card-text">Conducted steady and unsteady flow analysis in a 5 km prismatic channel. Evaluated the impact of weirs on water levels and flow regimes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Biodegradation in Anammox Bacterial Media</h5>
+                            <p class="card-text">Designed and maintained controlled laboratory conditions to cultivate anammox bacterial cultures. Monitored biodegradation rates using Spectroscopy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Solar Power Feasibility Study</h5>
+                            <p class="card-text">Assessed the technical and financial viability of a small-scale solar installation in Barisal, Bangladesh.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Decarbonization of the Chemical Industry</h5>
+                            <p class="card-text">Developed a roadmap for carbon neutrality using green hydrogen and renewable energy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Effect of Fertilizers on Soybean Yield</h5>
+                            <p class="card-text">Analyzed the impact of mineral and organic fertilizers on soybean yield attributes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <section class="section bg-light" id="experience">
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
         <div class="container">
             <h2>Experience</h2>
-            <p>Worked on environmental modeling, sustainable energy research, and data-driven climate analysis. Experience in academic research, industry collaborations, and international conferences.</p>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Gastwissenschaftler-Masterand</h5>
+                    <p class="card-text">Leibniz-Zentrum für Agrarlandschaftsforschung (ZALF) e.V. | July 2023 - May 2024</p>
+                    <ul>
+                        <li>Conducted research on global-scale crop yield variations using interpretable machine learning techniques.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Sustainability Intern</h5>
+                    <p class="card-text">MetrikFlow UG | Apr 2023 - Jul 2023</p>
+                    <ul>
+                        <li>Analyzed process flow diagrams and large datasets for footwear materials.</li>
+                        <li>Conducted material and process analysis for product environmental footprint calculation.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Executive Material Planner</h5>
+                    <p class="card-text">Apex Footwear Ltd. | Oct 2017 - Sep 2018</p>
+                    <ul>
+                        <li>Oversaw quality checks and maintenance of incoming materials.</li>
+                        <li>Managed supplier communications and relationships.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <section class="section" id="contact">
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Master of Science - Environmental and Resource Management</h5>
+                    <p class="card-text">Brandenburg University of Technology | Oct 2019 - May 2024</p>
+                    <p>Grade: 1.9/1.0 (German Scale)</p>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Bachelor of Science - Leather Engineering</h5>
+                    <p class="card-text">Khulna University of Engineering and Technology | Mar 2013 - May 2017</p>
+                    <p>Grade: 2.0/1.0 (German Scale)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
         <div class="container">
             <h2>Contact</h2>
             <p>Email: nahidhasan.ronn@gmail.com</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/ronninah" target="_blank">linkedin.com/in/ronninah</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nahid-hasan-ronnie-73744488/" target="_blank">linkedin.com/in/nahid-hasan-ronnie-73744488</a></p>
             <p>GitHub: <a href="https://github.com/ronninah" target="_blank">github.com/ronninah</a></p>
         </div>
     </section>
-    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Nahid Hasan Ronnie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
